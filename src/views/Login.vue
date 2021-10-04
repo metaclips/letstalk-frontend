@@ -110,20 +110,14 @@ export default Vue.extend({
       console.log(this.$store.state.token);
       this.detailsDisabled = true;
 
-      let URLs: [string, string];
+      let url = "";
       if (this.isAdmin) {
-        URLs = [
-          process.env.VUE_APP_BACKEND_SERVER + "/admin/login",
-          process.env.VUE_APP_BACKEND_SERVER + "/admin",
-        ];
+        url = "/admin/login";
       } else {
-        URLs = [
-          process.env.VUE_APP_BACKEND_SERVER + "/login",
-          process.env.VUE_APP_BACKEND_SERVER + "/",
-        ];
+        url = "/login";
       }
 
-      Axios.post(URLs[0], "", {
+      Axios.post(url, "", {
         params: {
           username: this.email,
           password: this.password,
