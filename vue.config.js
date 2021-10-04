@@ -5,6 +5,8 @@ module.exports = {
   ],
   "devServer": {
     "https": {},
-    "proxy": "127.0.0.1:8080"
+    "proxy": {
+      "/login": "http://127.0.0.1:8080/v1/login"
+    }
   }
 }
