@@ -10,7 +10,7 @@ RUN npm install -g http-server
 COPY . .
 
 ENV PORT=8080
-ENV VUE_APP_BACKEND_SERVER=https://188.166.170.44:8081
+ENV VUE_APP_BACKEND_SERVER=https://143.244.167.147:8080
 
 RUN npm install
 # build app for production with minification
