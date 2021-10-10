@@ -267,7 +267,7 @@ export default Vue.extend({
         year: parseInt(this.yearOfEntry),
       })
         .then((Response) => {
-          if (Response.status == 200) {
+          if (Response.status == 201) {
             this.$router.push("/login");
           }
         })
