@@ -184,7 +184,7 @@ export default Vue.extend({
     unreadRooms: new Map() as Map<string, boolean>,
 
     dialogError: "This is a dialog error",
-    showDialog: true,
+    showDialog: false,
 
     socketClosed: false,
   }),
