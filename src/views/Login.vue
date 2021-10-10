@@ -23,7 +23,7 @@
                   >
                 </v-col>
 
-                <v-col class="mx-auto" cols="12" md="6">
+                <v-col class="mx-auto" cols="12" md="4">
                   <v-text-field
                     v-model="email"
                     outlined
@@ -131,7 +131,8 @@ export default Vue.extend({
           console.log(Response.data.data);
 
           if (Response.status == 200) {
-            console.log("login successfull");
+            console.log("login successfull", Response.data.data.userID);
+
             this.$store.commit("setToken", Response.data.data.token);
             this.$store.commit("setEmail", this.email);
             this.$store.commit("setWsTicket", Response.data.data.wsTicket);
